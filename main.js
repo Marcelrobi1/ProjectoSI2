@@ -33,14 +33,14 @@ function convertirNegativo(num, base, bits = 8) {
         throw new Error("La base debe estar entre 2 y 36");
     }
 
-    // Si la base NO es binario → conversión normal
+    // Si a base não é binaria → conversión normal
     if (base !== 2) {
         return num >= 0
             ? num.toString(base)
             : "-" + Math.abs(num).toString(base);
     }
 
-    // Si es binario y NO es negativo → binario normal con padding
+    // Si é binario e não é negativo → binario normal con padding
     if (num >= 0) {
         return num.toString(2).padStart(bits, "0");
     }
@@ -52,7 +52,7 @@ function convertirNegativo(num, base, bits = 8) {
         throw new Error(`El número ${num} no cabe en ${bits} bits`);
     }
 
-    // Valor absoluto en binario con padding
+    // Valor absoluto em binario com padding
     let bin = Math.abs(num).toString(2).padStart(bits, "0");
 
     // Invertir bits

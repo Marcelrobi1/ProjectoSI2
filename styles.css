@@ -1,7 +1,6 @@
 :root {
     --bg: #0A0A1F;
     --glow-effect: #00efff;
-    --texto_inactivo: #AAAAAA;
 }
 
 /* Estilos generales */
@@ -34,19 +33,33 @@ nav .navbar-nav .nav-link {
 nav .navbar-nav .nav-link:hover {
     color: white;
 }
+.navbar-collapse {
+    display: flex;
+    padding: 15px;
+    justify-content: flex-end;
+}
+ul.navbar-nav li{
+    display: flex;
+    justify-content: end;;
+}
+.navbar-nav .nav-link {
+    color: var(--bg) inportant!; 
+    pointer-events: none;
+    cursor: default;
+}
 
 /* Estilos do main e container de cálculos */
 .container_main {
     height: 100%;
     padding-top: 20px;
     background-color: #ffffff00;
-    ;
+    margin-bottom: 50px;
 }
 
 .container_calculos {
     width: 90%;
     margin: 0 auto;
-    height: auto;
+    height: 52vh;
     background-color: rgba(255, 255, 255, 0.056);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -139,6 +152,7 @@ button:active {
     border-radius: 0 0 10px 10px;
     padding: 15px;
     text-align: center;
+    margin-bottom: 15px;
 }
 .titulo_resultado {
     font-size: 1.3rem;
@@ -174,7 +188,7 @@ button:active {
 
 /* Estilos do footer */
 footer {
-    position: relative;
+    position:static;
     bottom: 0;
     width: 100%;
     background-color: var(--bg);
